@@ -1,4 +1,6 @@
 import { Component, EventEmitter, OnInit, Output, SimpleChange } from '@angular/core';
+import { NavigationService } from '../../services/navigation/navigation.service'
+
 
 @Component({
   selector: 'app-search-bar',
@@ -7,16 +9,18 @@ import { Component, EventEmitter, OnInit, Output, SimpleChange } from '@angular/
 })
 export class SearchBarComponent implements OnInit {
 
-  @Output() monEvent = new EventEmitter();
+ // nomProduit: string;
 
-  constructor() { }
+  constructor(private navigationService: NavigationService ) {
+   // this.nomProduit = this.navigationService.produitChercher;
+  }
 
   ngOnInit(): void {
   }
 
   envoyerRecherche(event: any) {
     const nomRecherche = event.target.search.value;
-    this.monEvent.emit(nomRecherche);
     event.preventDefault();
+    this.navigationService.updateProduitChercher(nomRecherche)
   }
 }
