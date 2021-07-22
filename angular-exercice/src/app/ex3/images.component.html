@@ -1,0 +1,8 @@
+<h2>Evenement</h2>
+
+<p *ngIf="!imgUrl">Aucune Image</p>
+<img *ngIf="imgUrl" [src]="imgUrl" alt="">
+<br/>
+<button class="btn btn-danger m-2" (click)="changeImage(1)">Chat</button>
+<button class="btn btn-warning m-2" (click)="changeImage(3)">Poisson</button>
+<button class="btn btn-success m-2" (click)="changeImage(2)">Chien</button>

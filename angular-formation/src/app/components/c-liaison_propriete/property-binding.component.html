@@ -1,0 +1,14 @@
+<h2>Liaison de propriétés</h2>
+
+<!-- L'attribut HTML href est maintenant
+    liée à notre variable lien dans le .ts 
+    [attr]="maVariable"
+-->
+<a [href]="lien">Lien vers Dawan</a>
+<br/>
+<a [href]=" 'http://' + 'google.fr' ">
+    Lien vers google
+</a>
+<br/>
+
+<button [disabled]="isDisabled">Connexion</button>

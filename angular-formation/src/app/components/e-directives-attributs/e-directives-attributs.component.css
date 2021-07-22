@@ -1,0 +1,11 @@
+.txt {
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+}
+
+.static {
+    border: 2px solid black;
+}

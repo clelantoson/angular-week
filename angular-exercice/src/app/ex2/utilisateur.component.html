@@ -1,0 +1,23 @@
+<h2>Exercice 2: Utilisateurs</h2>
+
+<p *ngIf="!utilisateurs.length">Aucun utilisateur trouvé</p>
+<table *ngIf="utilisateurs.length" class="table table-hover table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Nom</th>
+            <th>Email</th>
+            <th>Site</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let utilisateur of utilisateurs">
+            <td>{{ utilisateur.name }}</td>
+            <td>{{ utilisateur.email }}</td>
+            <td>
+                <a [href]=" 'https://' + utilisateur.website ">
+                    {{ utilisateur.website }}
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>

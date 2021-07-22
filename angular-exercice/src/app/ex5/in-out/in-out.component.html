@@ -1,0 +1,13 @@
+<div class="alert alert-success">
+    <h2>{{ title }}</h2>
+    <!-- <app-article
+        [msg]="message"
+        (myEventUpdate)="title = $event"
+    >
+    </app-article> -->
+    <app-article
+        [msg]="message"
+        (myEventUpdate)="parentUpdate($event)"
+    >
+    </app-article>
+</div>

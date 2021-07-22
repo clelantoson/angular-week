@@ -1,0 +1,16 @@
+<h2>Liaison d'événement</h2>
+
+<!-- 
+    le nom de l'evenemt HTML sans le 'on' devant
+    onclick devient click
+    (event)="maFonction"
+ -->
+<button (click)="sayHello()">
+    Dire Bonjour !
+</button>
+
+<label for="">Nom</label>
+<!-- La variable $event est créer automatiquement par Angular -->
+<input 
+    type="text" 
+    (input)="afficherSaisi($event)"/>

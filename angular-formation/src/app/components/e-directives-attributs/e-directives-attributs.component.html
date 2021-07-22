@@ -1,0 +1,29 @@
+<h2 style="color: red;">Le Style & Classe CSS</h2>
+<p [style.color]="couleur">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. In, atque soluta. Soluta, unde praesentium neque dolorum officia sint blanditiis at officiis cupiditate natus quos a quod ut? Modi, doloremque quod?
+</p>
+
+<!-- ngStyle: Directive d'attribut -->
+<p [ngStyle]="{
+    color: 'cornflowerblue', 
+    fontSize: '20px'
+    }">
+    Lorem ipsum dolor sit amet consectetur adipisicing.
+</p>
+<p [ngStyle]="monStyle">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem itaque est aspernatur exercitationem, earum quo commodi rem impedit dolore harum dolorem esse doloremque ducimus voluptatum, labore eum eos quod illum?
+</p>
+
+<p class="static" [class]="maClasse">Lorem ipsum dolor sit.</p>
+
+<!-- 
+    Ajoute la classe error si le test est vrai 
+    [class.classeAAjouter]="condition"
+-->
+<p [class.error]="couleur === 'coral'">
+    Lorem ipsum dolor sit.
+</p>
+
+
+<!-- ngClass: Directive d'attribut -->
+<p [ngClass]="mesClasses">Lorem ipsum dolor sit amet consectetur adipisicing.</p>

@@ -1,0 +1,57 @@
+<h2>Directive Structurelles</h2>
+
+<h3>*ngIf</h3>
+<p *ngIf="isActive">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi autem ratione, libero iste laborum porro dolor necessitatibus eligendi quo voluptate ab totam. Sunt, porro. Consequuntur velit quidem nemo unde commodi!</p>
+
+<p *ngIf="!isActive; else notConnected">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum atque delectus doloribus nemo natus eum labore cumque quaerat maiores quas, quis dignissimos asperiores a praesentium excepturi error rem consectetur aperiam.
+</p>
+<ng-template #notConnected>
+    <p>Salut !</p>
+</ng-template>
+
+<h3>*ngFor</h3>
+
+<!-- 
+    <ul>
+        <li>
+        <li>
+        <li>
+    <ul>
+
+    <ul>
+        <li>
+    <ul>
+    <ul>
+        <li>
+    <ul>
+ -->
+<ul>
+    <li *ngFor="let prenom of prenoms">
+        {{ prenom }}
+    </li>
+</ul>
+
+<hr/>
+<ul>
+    <li *ngFor="let p of prenoms; index as i">
+        {{ p }} - {{ i }}
+    </li>
+</ul>
+
+
+<h3>[ngSwitch]</h3>
+
+<!-- 
+    switch(variableATest) {
+        case 1:
+            break;
+    }
+ -->
+<div [ngSwitch]="prenoms[0]">
+    <p *ngSwitchCase=" 'Maya' ">Maya a été trouvée</p>
+    <p *ngSwitchCase="prenom">Yohann a été trouvé</p>
+    <p *ngSwitchCase="prenoms[3]">John a été trouvé</p>
+    <p *ngSwitchDefault>Aucun Résultat</p>
+</div>
+
