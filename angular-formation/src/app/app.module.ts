@@ -13,6 +13,10 @@ import { GInputComponent } from './components/g-input/g-input.component';
 import { HOutputComponent } from './components/h-output/h-output.component';
 import { IObservableComponent } from './components/i-observable/i-observable.component';
 import { JServiceComponent } from './components/j-service/j-service.component';
+import { KRoutingComponent } from './components/k-routing/k-routing.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ParamsComponent } from './components/k-routing/params/params.component';
+import { BackComponent } from './components/k-routing/back/back.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +30,15 @@ import { JServiceComponent } from './components/j-service/j-service.component';
     GInputComponent,
     HOutputComponent,
     IObservableComponent,
-    JServiceComponent
+    JServiceComponent,
+    KRoutingComponent,
+    ParamsComponent,
+    BackComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
