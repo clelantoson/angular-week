@@ -23,8 +23,8 @@
 <p>Monnaies: {{ 35.99 | currency: "EUR" }}</p>
 <p>Monnaies: {{ 35.99 | currency: "EUR":"symbol":"":"fr" }}</p>
 
-<p>{{ dateDuJour | date: "full" }}</p>
+<p>{{ dateDuJour | date: "full":"":langue }}</p>
 
 <button (click)="changerLangue('fr')">Français</button>
 <button (click)="changerLangue('de')">Allemand</button>
-<button (click)="changerLangue('jp')">Japonais</button>
+<button (click)="changerLangue('ja')">Japonais</button>
