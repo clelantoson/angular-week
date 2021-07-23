@@ -6,6 +6,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { ProduitListComponent } from './components/produit-list/produit-list.component';
 import { ProduitDetailComponent } from './components/produit-detail/produit-detail.component';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app.routing.module';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { ProduitDetailComponent } from './components/produit-detail/produit-deta
     ProduitDetailComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [
     //NumberService

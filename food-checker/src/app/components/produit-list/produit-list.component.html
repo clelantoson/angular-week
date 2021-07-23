@@ -1,13 +1,24 @@
-<p *ngIf="!produits.length">
-    Aucun produit disponible
-</p>
+<p *ngIf="!produits.length">Aucun produit disponible</p>
 <div class="cards d-flex container flex-wrap">
-    <div *ngFor="let produit of produits" class="card flex-shrink-0 m-4" style="width: 18rem;">
-        <img [src]="produit.img" class="card-img-top" [alt]="produit.name">
-        <div class="card-body">
-          <h5 class="card-title">{{ produit.name }}</h5>
-          <p class="card-text">{{ produit.price }}</p>
-          <a href="#" class="btn btn-dark">Plus d'information</a>
-        </div>
+  <div
+    *ngFor="let produit of produits"
+    class="card flex-shrink-0 m-4"
+    style="width: 18rem"
+  >
+    <img
+      [src]="produit.image_front_url"
+      class="card-img-top"
+      [alt]="produit.product_name_fr"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ produit.product_name_fr }}</h5>
+      <p class="card-text">{{ produit.generic_name_fr }}</p>
+      <a
+        (click)="setProduit(produit.id)"
+        [routerLink]="['produit', produit.id]"
+        class="btn btn-dark"
+        >Plus d'information</a
+      >
     </div>
+  </div>
 </div>
