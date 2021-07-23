@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { InterpolationComponent } from './components/b-interpolation/interpolation.component';
@@ -17,6 +17,18 @@ import { KRoutingComponent } from './components/k-routing/k-routing.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ParamsComponent } from './components/k-routing/params/params.component';
 import { BackComponent } from './components/k-routing/back/back.component';
+import { NotFoundComponent } from './components/k-routing/not-found/not-found.component';
+import { LPipesComponent } from './components/l-pipes/l-pipes.component';
+
+import localFr from '@angular/common/locales/fr';
+import localDe from '@angular/common/locales/de';
+import localJa from '@angular/common/locales/ja';
+import { registerLocaleData } from '@angular/common';
+import { ReversePipe } from './pipes/reverse.pipe';
+
+registerLocaleData(localFr);
+registerLocaleData(localDe);
+registerLocaleData(localJa);
 
 @NgModule({
   declarations: [
@@ -33,14 +45,21 @@ import { BackComponent } from './components/k-routing/back/back.component';
     JServiceComponent,
     KRoutingComponent,
     ParamsComponent,
-    BackComponent
+    BackComponent,
+    NotFoundComponent,
+    LPipesComponent,
+    ReversePipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    //NumberService
+    // en fr par defaut
+    {provide: LOCALE_ID, useValue: 'fr'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

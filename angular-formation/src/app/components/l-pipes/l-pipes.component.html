@@ -1,0 +1,30 @@
+<h2>Les pipes</h2>
+
+<h3>Le Texte</h3>
+<!-- ALTGR + 6 -->
+<p>{{ message | titlecase }}</p>
+<p>{{ message | uppercase }}</p>
+<hr />
+<h3>Les Dates</h3>
+<p>{{ dateDuJour | date }}</p>
+<p>{{ dateDuJour | date: "dd/MM/YYYY" }}</p>
+<p>{{ dateDuJour | date: "shortTime" }}</p>
+
+<h3>Les nombres</h3>
+
+<p>{{ 3.1415 | number: "1.1-2" }}</p>
+<p>{{ 3 | number: "1.1-2" }}</p>
+<p>{{ 3 | number: "1.2-2" }}</p>
+
+<p>Chainage de pipes:</p>
+<p>{{ dateDuJour | date: "full" | uppercase }}</p>
+
+<p>Monnaies: {{ 35.99 | currency }}</p>
+<p>Monnaies: {{ 35.99 | currency: "EUR" }}</p>
+<p>Monnaies: {{ 35.99 | currency: "EUR":"symbol":"":"fr" }}</p>
+
+<p>{{ dateDuJour | date: "full" }}</p>
+
+<button (click)="changerLangue('fr')">Français</button>
+<button (click)="changerLangue('de')">Allemand</button>
+<button (click)="changerLangue('jp')">Japonais</button>

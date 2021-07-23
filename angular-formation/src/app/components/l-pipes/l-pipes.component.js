@@ -6,20 +6,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 exports.__esModule = true;
-exports.KRoutingComponent = void 0;
+exports.LPipesComponent = void 0;
 var core_1 = require("@angular/core");
-var KRoutingComponent = /** @class */ (function () {
-    function KRoutingComponent() {
+var LPipesComponent = /** @class */ (function () {
+    function LPipesComponent() {
+        this.message = "lorem ipsum lol ol";
+        this.dateDuJour = new Date();
     }
-    KRoutingComponent.prototype.ngOnInit = function () {
+    LPipesComponent.prototype.ngOnInit = function () {
     };
-    KRoutingComponent = __decorate([
+    LPipesComponent = __decorate([
         core_1.Component({
-            selector: 'app-k-routing',
-            templateUrl: './k-routing.component.html',
-            styleUrls: ['./k-routing.component.css']
+            selector: 'app-l-pipes',
+            templateUrl: './l-pipes.component.html',
+            styleUrls: ['./l-pipes.component.css']
         })
-    ], KRoutingComponent);
-    return KRoutingComponent;
+    ], LPipesComponent);
+    return LPipesComponent;
 }());
-exports.KRoutingComponent = KRoutingComponent;
+exports.LPipesComponent = LPipesComponent;
