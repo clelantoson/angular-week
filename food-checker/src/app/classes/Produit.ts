@@ -3,7 +3,7 @@ import { Nutriment } from "./Nutriment";
 export class Produit {
 	image_front_url: string;
 	nutrition_grade_fr: string;
-	nutriments: Nutriment[]
+	nutriments: Nutriment
 	generic_name_fr: string;
 	product_name_fr: string;
 	id: number;
@@ -11,7 +11,7 @@ export class Produit {
   constructor(
     image_front_url: string,
     nutrition_grade_fr: string,
-    nutriments: Nutriment[],
+    nutriments: Nutriment,
     generic_name_fr: string,
     product_name_fr: string,
 	id: number
